@@ -1,0 +1,23 @@
+{
+  "name": "fxrp-sentinel-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for FXRP Sentinel — confidential-compute-priced insurance for Flare FAssets",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:coston2": "hardhat run scripts/deploy.js --network coston2",
+    "deploy:flare": "hardhat run scripts/deploy.js --network flare",
+    "verify:coston2": "hardhat verify --network coston2",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.10"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
