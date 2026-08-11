@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html,
+body {
+  background-color: #ffe370;
+  color: #14110f;
+  font-family: var(--font-body);
+}
+
+/* Subtle diagonal hazard texture behind the whole page — quiet enough to
+   read as "watchtower alert surface", not loud enough to fight the cards. */
+body {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(20, 17, 15, 0.045) 0px,
+    rgba(20, 17, 15, 0.045) 2px,
+    transparent 2px,
+    transparent 18px
+  );
+}
+
+::selection {
+  background-color: #14110f;
+  color: #ffe370;
+}
+
+/* Reusable brutalist card base */
+.card-brutal {
+  background-color: #ffffff;
+  border: 3px solid #14110f;
+  box-shadow: 6px 6px 0 0 #14110f;
+}
+
+.btn-brutal {
+  border: 3px solid #14110f;
+  box-shadow: 4px 4px 0 0 #14110f;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn-brutal:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 #14110f;
+}
+
+.btn-brutal:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid #6a5cff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
