@@ -1,0 +1,29 @@
+# Secrets — never commit
+.env
+**/.env
+!**/.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Hardhat
+contracts/artifacts/
+contracts/cache/
+contracts/typechain-types/
+contracts/coverage/
+contracts/coverage.json
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+
+# Python
+backend/__pycache__/
+backend/*.pyc
+backend/.price_history.json
+backend/venv/
+
+# OS
+.DS_Store
